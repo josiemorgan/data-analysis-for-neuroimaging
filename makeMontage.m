@@ -14,14 +14,17 @@ data= niftiread(fname);
 montage(data);
 
 % 2) robustRange
+    % changes the amount of data shown
 
 robustRange= prctile(data(:), [5,95]);
 
 % 3) permute step
+    % changes the orientation of the output
 
 dataP= permute (data, [2, 1, 3]);
 
 % 4) figure out indices
+    % changes the data which is shown 
 
 nSlices = size(dataP,3);
 idx= round ( linspace(1, nSlices, nDisplay) );

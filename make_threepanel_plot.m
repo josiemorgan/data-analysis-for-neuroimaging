@@ -38,6 +38,8 @@ size(anatomy)
 
 %% use return slice to get one slice out 
 
+% changes the colourmap and the orientation
+
 s= returnSlice(anatomy, 60, 1);
 imagesc(s)
 colormap(gray())

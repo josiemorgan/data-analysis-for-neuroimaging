@@ -87,6 +87,8 @@ ylabel('fMRI response (image intensity')
 % return back to where my script is 
 cd(currentworkingdirectory)
 
+% change the dimensions of the pdf when the figure is produced
+
 fig.PaperSize =[15 10];
 fig.PaperUnits = 'centimeters';
 fig.PaperPosition = [0 0 15 10];

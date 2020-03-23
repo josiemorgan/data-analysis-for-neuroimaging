@@ -1,10 +1,12 @@
 % create a timeseries plot 
 
 % load in the text file with the first set of MNI coordinates 
+
+% load the text file with the value representing the coordinates
 y= load ('textfile2.txt')
 y1 = load('textfile3.txt')
 data= niftiread('filtered_func_data.nii.gz');
-y2= squeeze(data(38,20,18, :));
+y2= squeeze(data(38,20,18, :)); % squeeze the coordinations but with one added to each value
 y3= squeeze(data(34,63,10, :))
 
 
@@ -27,7 +29,7 @@ hold on
 plot(y1, 'r')
 legend('filtered data','data')
 
-%
+% change the dimensions of the pdf when the figure is published
 fig.PaperSize =[15 10];
 fig.PaperUnits = 'centimeters';
 fig.PaperPosition = [0 0 15 10];
